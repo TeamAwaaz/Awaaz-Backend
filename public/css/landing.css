@@ -1,0 +1,154 @@
+html{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header-content .title{
+    font-size: 2.625rem;
+    margin: 0 0 1.3125rem;
+    font-weight: 400;
+    line-height: 1.25;
+    color: #3d4250;
+}
+
+.header-content .container{
+    position: relative;
+    top: 50%;
+}
+
+.header-content .title-body{
+    line-height: 140%;
+    color: #6f749a;
+    font-weight: 300;
+    font-size: 1.15rem;
+}
+
+.header-content button{
+    border-radius: 500px;
+    height: 45px;
+}
+.header-content button:hover{
+    background-color: #51CFE0;
+    opacity: 0.85;
+}
+
+#header-img{
+    position: relative;
+    right:-10px;
+    margin-top: 2px;
+    width: 100%;
+}
+
+.feature-img{
+    width: 70px !important;
+}
+
+.feature-title{
+    font-family: 'Questrial', sans-serif;
+    font-size: 2.2rem;
+    opacity: 0.8;
+    font-weight: 600;
+}
+
+.feature-text{
+    font-family: 'Questrial', sans-serif;
+    font-size: 1.2rem;
+    color: #6F749A;
+}
+
+/* Testing SVG Section Seperator */
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+*, *:after, *::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+section {
+    position: relative;
+    padding: 10em;
+    background: teal;
+    color: #fff;
+    text-align: center;
+}
+
+section::before,
+section::after {
+    position: absolute;
+    content: '';
+    pointer-events: none;
+}
+
+.color {
+    background: #005c5c;
+}
+
+#curveDownColor path {
+    fill: #FFC662;
+    stroke: #FFC662;
+}
+
+#curveUpColor path {
+    fill: #FA476F;
+    stroke: #FA476F;
+}
+
+.works-title{
+    font-family: 'Questrial', sans-serif;
+    font-size: 2rem;
+    opacity: 0.8;
+    font-weight: 600;
+    margin-top: -60px;
+}
+
+.works-text{
+    font-family: 'Questrial', sans-serif;
+    font-size: 1.2rem;
+    color: #6F749A;
+}
+
+.works-img{
+    height: 200px;
+    margin-top: 60px;
+}
+
+.works-num{
+    font-size: 50px;
+    color: #AEEC73;
+}
+
+.testimonials{
+    margin-top: -5px;
+    background-color: #FA476F;
+}
+
+.testimonial-container{
+    background: #FA476F;
+}
+
+footer{
+    background: #3ECADD !important;
+}
+
+#log2{
+    max-width:600px;
+    overflow:hidden;
+}
+#leftlogin{
+    border-right: solid 1px #3f51b5;
+    padding-right:20px;
+}
+
+#message{
+    margin-right: 150px;
+    margin-top: 100px;
+}
+
+.parallax-container{
+    background: rgba(255,43,108,0.8);
+    margin-top: -10px;
+}
+
+#parallax-2{
+    background: rgba(30,144,255,0.8);
+    margin-top: -10px;
+}
