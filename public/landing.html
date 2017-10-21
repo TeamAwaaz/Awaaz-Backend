@@ -290,6 +290,7 @@
 
 <!-- Modal Trigger -->
 <div id="log2" class="modal z-depth-1 grey lighten-4 row" style="padding:20px 10px">
+    <div class="row">
     <div id="leftlogin" class="col s7">
         <div class='row'>
             <div class='col s12'>
@@ -307,10 +308,8 @@
                 <a class='pink-text' href='#!'><b>Forgot Password?</b></a>
             </label>
             <br/><br/>
-            <button type='submit' name='btn_login' class='col s12 btn waves-effect indigo'>Login</button>
+            <button id="login_btn" type='submit' name='btn_login' class='col s12 btn waves-effect indigo'>Login</button>
         </div>
-
-
     </div>
     <div class="col s5 row">
         <div class="col s12 center-align"><h5 class="indigo-text">Login Using</h5></div>
@@ -320,43 +319,6 @@
         <div class="col s12 center-align">&nbsp;</div>
         <button type='submit' name='btn_login' class='col s8 offset-s2 btn waves-effect red darken-3'>Google</button>
     </div>
-</div>
-
-<!-- Modal Structure -->
-<div id="login-register" class="modal">
-    <div class="row">
-        <div class="col s12 purple darken-4">
-            <ul class="tabs tabs-transparent tabs-fixed-width">
-                <li class="tab col s3"><a href="#log-tab">Login</a></li>
-                <li class="tab col s3"><a class="active" href="#reg-tab">Register</a></li>
-            </ul>
-        </div>
-        <div id="log-tab" class="col s12">
-            <div id="tab-login row" class="my-tab-content">
-                <div class="col s6">
-                    <div class="input-field col s12">
-                        <input id="email" type="email" name="ajax_email" class="validate">
-                        <label for="email">Email</label>
-                    </div>
-                    <div class="input-field col s12">
-                        <input id="password" type="password" name="ajax_password" class="validate">
-                        <label for="password">Password</label>
-                    </div>
-                    <input type="button" value="Login" id="button-login-pop" class="ajax_login btn orange darken-4" />
-                    <a id="forgot_password">&nbsp;&nbsp;Forgot Password</a>
-
-                </div>
-                <div class="col s6">
-                    <div class="row">
-                        <a class="btn purple darken-4 col s12" id="forgot_password"><i class="material-icons">account_box</i> Facebook</a>
-                        <a class="btn red col s12" id="forgot_password"><i class="material-icons">account_box</i> Google</a>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-        <div id="reg-tab" class="col s12">Test 2</div>
     </div>
 </div>
 
@@ -393,21 +355,22 @@
         });
 
 
-        $.ajax({
-            url: '/signup',
-            type: 'POST',
-            contentType: 'application/json',
-            data: JSON.stringify({
-              name:"Arzoo Chadha",
-              email:"arzoo@1243.com",
-              password:"1234564"
-            }),
-            error: function(e) {
-                console.log("Error: ",e);
-            },
-            success: function(data) {
-                console.log(data.name);
-            }
+        $("#login_btn").onclick(function () {
+            $.ajax({
+                url: '/signin',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    email:"arzoo@1243.com",
+                    password:"1234564"
+                }),
+                error: function(e) {
+                    console.log("Error: ",e);
+                },
+                success: function(data) {
+                    console.log(data);
+                }
+            });
         });
     });
 
