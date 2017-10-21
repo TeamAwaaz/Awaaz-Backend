@@ -54,7 +54,7 @@ app.get('/app/:id', (req, res)=>{
     let userID = req.params.id;
 
     if (ObjectID.isValid(userID)) {
-        res.send("Application page here!");
+        res.sendFile(__dirname + '/public/file.html');
     }else {
         res.status(404).send("No user found!")
     }
