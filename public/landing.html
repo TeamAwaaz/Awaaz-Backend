@@ -362,8 +362,8 @@
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({
-                    email:"test123@test.com",
-                    password:"test123"
+                    email:document.getElementById("email").value,
+                    password:document.getElementById("password").value
                 }),
                 error: function(e) {
                     console.log("Error: ",e);
