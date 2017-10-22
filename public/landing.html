@@ -228,7 +228,7 @@
             <div class="col s12 m8">
                 <p class="center" style="font-size:30px;font-weight: 100;"> Say Hello!</p>
                 <div class="row">
-                    <form method="POST" action="http://formspree.io/{insert-email-here}" class="col s12">
+                    <form method="POST" action="http://formspree.io/siddhantchadha2121@gmail.com" class="col s12">
                         <div class="row">
                             <div class="input-field col s6">
                                 <i class="material-icons prefix">account_circle</i>
@@ -356,13 +356,14 @@
 
 
         $("#login_btn").click(function () {
+        
             $.ajax({
                 url: '/signin',
                 type: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify({
-                    email:"arzoo@1243.com",
-                    password:"1234564"
+                    email:"test123@test.com",
+                    password:"test123"
                 }),
                 error: function(e) {
                     console.log("Error: ",e);
