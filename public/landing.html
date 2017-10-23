@@ -313,16 +313,16 @@
             </div>
             <div style="display: none;" class="signup">
             <div class='input-field col s12'>
-                <input class='validate' type='text' name='name' id='name' />
-                <label for='name'>Enter your name</label>
+                <input class='validate' type='text' name='name-su' id='name-su' />
+                <label for='name-su'>Enter your name</label>
             </div>
             <div class='input-field col s12'>
-                <input class='validate' type='email' name='email' id='email' />
-                <label for='email'>Enter your email</label>
+                <input class='validate' type='email' name='email-su' id='email-su' />
+                <label for='email-su'>Enter your email</label>
             </div>
             <div class='input-field col s12'>
-                <input class='validate' type='password' name='password' id='password' />
-                <label for='password'>Enter your password</label>
+                <input class='validate' type='password' name='password-su' id='password-su' />
+                <label for='password-su'>Enter your password</label>
             </div>
             <br/><br/>
                 <button id="signup_btn" type='submit' name='btn_signup' class='col s12 btn waves-effect indigo'>Sign Up</button>
@@ -407,8 +407,8 @@
         
         $("#signup_btn").click(function () {
             
-//            console.log(document.getElementById("name").value);
-//            console.log(document.getElementById("email").value); 
+            console.log("name", document.getElementById("name-su").value);
+            console.log("email", document.getElementById("email-su").value);
               $.ajax({
                 url: '/signup',
                 type: 'POST',
