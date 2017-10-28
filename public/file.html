@@ -18,7 +18,7 @@
 <body>
 
     <div class="container">
-        <h1>Voice Analyser</h1>
+        <h1>Voice Analyser <button id="logout" class="btn">Sign Out</button></h1>
         <hr /> 
 
         <form id="form" class="form-horizontal">
@@ -288,6 +288,15 @@ var audio_context = new Context();
                 $('#result').append(parsedJson.result.analysisSegments[0].analysis.Mood.Composite.Primary.Phrase); console.log(parsedJson.result.analysisSegments[0].analysis.Mood.Composite.Primary.Phrase);
             }
         }
+    </script>
+    
+    <script type="text/javascript">
+        $("#logout").click(function (){
+           if(window.localStorage.getItem("id")){
+               window.localStorage.removeItem("id");
+           } 
+               window.location = "http://www.teamawaaz.cf";
+        });
     </script>
 </body>
 </html>

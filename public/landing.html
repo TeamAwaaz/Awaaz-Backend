@@ -26,6 +26,8 @@
                 <li><a class="no-btn" href="#header-sec">Home</a></li>
                 <li><a class="no-btn" href="#features">Features</a></li>
                 <li><a class="no-btn" href="#contact-nav">Contact</a></li>
+                <li><a class="no-btn" href="dashboard/index.html">Dashboard</a></li>
+                <li><a id="app-btn" class="no-btn" href="#">Analyser</a></li>
                 <li><a class="waves-effect btn" onClick="$('#log2').modal('open')">Login</a></li>
             </ul>
         </div>
@@ -400,6 +402,7 @@
                 },
                 success: function(data) {
                     console.log(data);
+                    window.localStorage.setItem("id",data.user._id);
                     window.location = "/app/" + data.user._id;
                 }
             });
@@ -423,6 +426,7 @@
                 },
                 success: function(data) {
                     console.log(data);
+                    window.location = "/app/" + data.user._id;
                 }
             });
         });
@@ -439,6 +443,14 @@
            $("#show_signup").css("color","blue");      
            $(".login").css("display","block");
            $(".signup").css("display","none");    
+        });
+        
+        $("#app-btn").click(function() {
+            if (window.localStorage.getItem("id")){
+                window.location = "/app/" + window.localStorage.getItem("id");
+            }else{
+                $('#log2').modal('open');
+            }
         });
     });
 
